@@ -45,5 +45,23 @@ export class AppComponent {
   }
 
 
+  info() {
+    this.pouchdb.info().then(function (info: any) {
+      console.log(info);
+    })
+  }
+
+  export() {
+    this.pouchdb.allDocs({
+      include_docs: true,
+      attachments: true
+    }).then(function (result: any) {
+      console.log(result)
+    }).catch(function (err: any) {
+      console.log(err);
+    });
+  }
+  
+
   
 }
