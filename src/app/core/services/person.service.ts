@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
 
+import * as PouchDB from 'pouchdb';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PersonService {
 
-  constructor() { }
+  private db: any;
+
+  constructor() { 
+    this.db = new PouchDB('person');
+  }
+
+
 
 }
