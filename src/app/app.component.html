@@ -1,1 +1,14 @@
-it works
+<h1>Welcome to Pouch DB Integration Demo</h1>
+<br>
+<br>
+<form [formGroup]="pouchform"> 
+  <label>Your Name</label>
+  <input formControlName="name"/>
+  <br>
+  <br>
+  <label>Your email id</label>
+  <input type="email" formControlName="emailid"/>
+  <br>
+  <br>
+  <button (click)="saveForm()" type="submit">Save Form</button>
+</form>
